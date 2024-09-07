@@ -29,6 +29,7 @@ ENV TZ=Asia/Shanghai
 ENV PORT=6180
 ENV IPV6=false
 ENV PSK=
+ENV OBFS=
 
 LABEL version="${SNELL_SERVER_VERSION}"
 
