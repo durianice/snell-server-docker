@@ -8,6 +8,7 @@ run() {
     PSK=${PSK:-$(tr -dc A-Za-z0-9 </dev/urandom | head -c 31)}
     PORT=${PORT:-6180}
     IPV6=${IPV6:-false}
+    OBFS=${OBFS:-http}
 
     echo "Using PSK: ${PSK}"
     echo "Using port: ${PORT}"
@@ -19,6 +20,7 @@ run() {
 listen = 0.0.0.0:${PORT}
 psk = ${PSK}
 ipv6 = ${IPV6}
+obfs = ${OBFS}
 EOF
   fi
   echo -e "Starting snell-server...\n"
